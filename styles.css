@@ -1,12 +1,212 @@
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-.work-sans-font {
+* {
   font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
-.brand {
-  font-size: 45px;
-  font-weight: 700;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-items {
+  margin-right: 30px;
+}
+.nav-link {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+  font-size: 18px;
+  font-weight: 500;
+}
+.brand {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: color: rgb(19, 19, 19);;
+}
+.bg-light {
+    background-color:rgba(255, 144, 14, 0.1);
+    margin-bottom: 85px;
+}
+/* styles banner section here */
+.banner {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.banner-image img {
+    width: 100%;
+}
+.banner-title {
+    color: rgb(19, 19, 19);
+    font-size: 4rem;
+    font-weight: 700;
+}
+.banner-description {
+ color: rgb(114, 114, 114);
+font-size: 1rem;
+font-weight: 400;
+line-height: 26px;
+margin-bottom: 1.5rem;
+}
+.btn-primary {  
+width: 180px;
+height: 64px;
+border-radius: 8px;
+background: rgb(255, 144, 14);
+border: none;
+color: rgb(255, 255, 255);
+font-size: 1.25rem;
+font-weight: 600;
+}
+/* styles team section here */
+.teams {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 130px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.team-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.team-image img {
+    width: 300px;
+}
+.features {
+    margin-left: 50px;
+}
+.feature-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 53px;
+    margin-bottom: 24px;
+}
+.list {
+    font-weight: 500;
+    color: #727272;
+}
+.out {
+    font-weight: bold;
+    color: #131313;
+}
+.feat {
+    font-weight: bold;
+    color: #FF900E;
+}
+.features-description {
+    font-size: 1rem;
+    color: #727272;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 32px;
+}
+/* styles enjoy section here */
+.enjoy {
+    max-width: 1140px;
+    height: 800px;
+    margin: 0 auto;
+    margin-bottom: 130px;
+    border: 1px solid red;
+}
+/* styles some section here */
+.some {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    border: 1px solid red;
+}
+.some-title {
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: rgb(19, 19, 19);
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+.some-description {
+    color: rgb(114, 114, 114);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 80px;
+}
+.fact-items {
+    display: flex;
+    justify-content: space-around;
+}
+.fact-item {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(255, 144, 14);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fact-item h4 {
+    color: rgb(66, 66, 66);
+    font-size: 2.9rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+.fact-item h5 {
+    color: rgb(114, 114, 114);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 2px;
+    margin-bottom: 30px;
+}
+.fact-item img {
+    width: 40px;
+    height: 40px;
+    margin-top: 25px;
+}
+/* responsive media query for navbar */
+@media screen and (max-width: 576px) {
+    .navbar, .nav-links {
+        flex-direction: column;
+    }
+}
+/* responsive media query for teams section */
+@media screen and (max-width: 576px) {
+    .teams {
+        flex-direction: column;
+    }
+    .team-image {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* media query for mediam devices */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams {
+        flex-direction: column;
+    }
+    .features {
+        margin: 50px 50px;
+    }
+}
+
