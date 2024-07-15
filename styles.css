@@ -124,11 +124,78 @@ font-weight: 600;
 /* styles enjoy section here */
 .enjoy {
     max-width: 1140px;
-    height: 800px;
     margin: 0 auto;
     margin-bottom: 130px;
     border: 1px solid red;
+    display: flex;
+    gap: 80px;
 }
+.btn-last {
+    padding: 42px 45px;
+    border-radius: 8px;
+    background: rgb(255, 144, 14);
+    border: none;
+    margin-top: -100px;
+    margin-left: -30px;
+}
+#year {
+    font-size: 4rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+#experience {
+    font-size: 1.6rem ;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.section-title {
+    color: rgb(19, 19, 19);
+    font-size: 2.9rem;
+    font-weight: 700;
+    line-height: 53px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+#section-border {
+    border-left: 5px solid rgb(255, 144, 14);
+    padding-left: 20px;
+}
+.enjoy-description {
+    color: rgb(114, 114, 114);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+.enjoy-card h4 {
+    color: rgb(19, 19, 19);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.enjoy-card p {
+    color: rgb(114, 114, 114);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+.enjoy-card {
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px 0px rgba(17, 17, 17, 0.06);
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.enjoy-image img {
+    width: 600px;
+    height: 980px;
+    
+}
+
 /* styles some section here */
 .some {
     max-width: 1140px;
@@ -184,10 +251,71 @@ font-weight: 600;
     height: 40px;
     margin-top: 25px;
 }
+/* styles sponspors section here */
+.sponspors {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 130px;
+    border: 1px solid red;
+}
+.sponspors-title {
+    color: rgb(19, 19, 19);
+    font-size: 2.9rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.sponspors-description {
+    color: rgb(114, 114, 114);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sponspors-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sponspors-image img {
+    filter: grayscale(100%);
+}
+/* styles footer section here  */
+footer {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 244, 231);
+    border-radius: 7px;
+}
+footer > p {
+    color: rgb(66, 66, 66);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
 /* responsive media query for navbar */
 @media screen and (max-width: 576px) {
     .navbar, .nav-links {
         flex-direction: column;
+    }
+    .fact-items {
+        flex-direction: column;
+        justify-items: center;
+        gap: 15px;
+    }
+    .enjoy {
+        flex-direction: column;
+    }
+    .enjoy-image img {
+        width: 100%;       
+    }
+    .btn-last {
+        margin-top: 20px;
+        margin-left: 25px;
     }
 }
 /* responsive media query for teams section */
@@ -199,6 +327,21 @@ font-weight: 600;
         display: flex;
         flex-direction: column;
     }
+    .sponspors-image {
+        flex-direction: column;
+        gap: 30px;
+        justify-items: center;
+        align-items: center;
+    }
+    .sponspors-image img {
+        width: 50%;
+    }
+    .some h3, p {
+        text-align: center;
+    }
+    .fact-items {
+        align-items: center;
+    }
 }
 /* media query for mediam devices */
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -208,5 +351,30 @@ font-weight: 600;
     .features {
         margin: 50px 50px;
     }
+    .sponspors-image {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        justify-items: center;
+        align-items: center;
+    }
+    .fact-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        gap: 15px;
+    }
+    .enjoy {
+        flex-direction: column;
+    }
+    .enjoy-image img {
+        width: 100%;
+    }
+    .btn-last {
+        margin-top: 20px;
+        margin-left: 180px;
+    }
+
 }
 
